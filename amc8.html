@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Browse classified AMC 8 questions, choose a practice set, and print original questions and diagrams.">
+  <title>AMC 8 · Question Library</title>
+  <link rel="stylesheet" href="assets/site.css">
+  <script src="assets/data/catalog.js" defer></script>
+  <script src="assets/app.js" defer></script>
+</head>
+<body data-library="amc8">
+  <a class="skip-link" href="#question-list">Skip to questions</a>
+  <header class="site-header">
+    <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">∑</span> Question Library</a>
+    <nav class="header-nav" aria-label="Libraries"><a href="math-league.html">Math League</a><a href="amc8.html" aria-current="page">AMC 8</a><a href="combined.html">Combined</a></nav>
+  </header>
+  <main class="library-main">
+    <div class="library-intro">
+      <div><p class="eyebrow">Middle school practice</p><h1>AMC 8</h1><p>1,025 questions · 41 contests</p></div>
+      <span class="collection-tag">1985–2020 and 2022–2026</span>
+    </div>
+    <noscript><p class="noscript-warning">Please enable JavaScript to browse and filter this library. The question data is included with these files; no account or installation is required.</p></noscript>
+    <div class="workspace">
+      <aside class="topic-sidebar" aria-label="Question classifications">
+        <details id="topic-panel" class="topic-panel" open>
+          <summary class="topic-panel-heading">Topics</summary>
+          <div class="topic-panel-content">
+            <label class="sr-only" for="topic-search">Find a topic</label>
+            <input type="search" id="topic-search" placeholder="Find a topic…" autocomplete="off">
+            <div class="topic-tools"><button id="all-topics" type="button">All topics</button><button id="expand-topics" type="button">Expand</button><button id="collapse-topics" type="button">Collapse</button></div>
+            <label class="checkbox-control"><input type="checkbox" id="include-children" checked> Include subtopics</label>
+            <p id="tree-count-note" class="topic-help">Counts include the active filters. Choose a branch to see its questions and subtopics.</p>
+            <nav id="topic-tree" class="topic-tree" aria-label="Topic tree"><p>Loading topics…</p></nav>
+          </div>
+        </details>
+      </aside>
+      <section class="question-content" aria-label="Browse questions">
+        <div class="filter-panel">
+          <label class="search-field" for="question-search"><span class="field-label">Search questions</span><input id="question-search" type="search" placeholder="Words, year, or question number…" autocomplete="off"></label>
+          <div class="filter-row">
+            <div class="filter-field"><label for="year-filter">Contest year</label><select id="year-filter"><option value="all">All years</option></select></div>
+            <div id="source-filter-wrap" class="filter-field" hidden><label for="source-filter">Collection</label><select id="source-filter"><option value="all">Both collections</option><option value="mathleague">Math League</option><option value="amc8">AMC 8</option></select></div>
+            <div class="filter-field"><label for="sort-order">Order</label><select id="sort-order"><option value="topic">Classification tree</option><option value="year-asc">Year · oldest first</option><option value="year-desc">Year · newest first</option></select></div>
+            <div class="filter-field page-size-field"><label for="page-size">Per page</label><select id="page-size"><option value="12">12 questions</option><option value="24" selected>24 questions</option><option value="48">48 questions</option></select></div>
+            <div class="reset-wrap"><button id="reset-filters" type="button" class="button-quiet">Reset filters</button></div>
+          </div>
+        </div>
+        <div class="selection-bar">
+          <div class="selection-group"><span id="selection-count" class="selection-count">0 selected</span><button id="select-filtered" type="button">Select filtered</button><button id="clear-selection" type="button" class="button-quiet">Clear</button></div>
+          <div class="print-group"><button id="print-filtered" type="button" class="button-primary">Print filtered questions</button><button id="print-selected" type="button" disabled>Print selected (0)</button></div>
+        </div>
+        <div class="progress-line"><span id="print-status" role="status" aria-live="polite"></span><button id="cancel-print" class="button-small" type="button" hidden>Cancel</button></div>
+        <div class="results-heading"><div><h2 id="active-topic">All topics</h2><p id="result-count" class="result-count" role="status" aria-live="polite">Loading questions…</p></div></div>
+        <p class="mobile-image-note">Questions keep their original layout. Swipe sideways to view a full question.</p>
+        <div id="question-list" class="question-list"><div class="loading-placeholder">Preparing the question library…</div></div>
+        <nav id="pagination" class="pagination" aria-label="Question pages"><button id="prev-page" type="button" disabled>← Previous</button><span id="page-status">Page 1</span><button id="next-page" type="button" disabled>Next →</button></nav>
+        <div id="app-status" class="app-status" role="status" aria-live="polite"></div>
+        <details class="collection-notes"><summary>About this collection and the classification tree</summary><p>This collection contains all 1,025 questions from the 41 complete English contest papers in the supplied AMC 8 binder: 1985–2020 and 2022–2026. Duplicate copies, translations, solutions, and answer keys were omitted.</p><p>Questions follow the saved Math League classification tree, with one primary teaching category per question. A question may also be useful for another topic. These are inferred teaching classifications, not official question tags.</p><p>Six categories marked <strong>[+]</strong> were added for the AMC 8 collection: Pythagorean Theorem and Right Triangles; Cylinders; Data Displays; Probability of a Single Event; Probability with Multiple Events or Draws; and Mode, Range, and Combined Data Summaries.</p><p>The original question images preserve notation, diagrams, and choices. Text search may miss words or mathematical symbols that were not recognized in the source. Answers and solutions are not included.</p><p>Selections are kept in this browser when available. Use the print buttons to include the complete filtered or selected set, even when it spans several screen pages.</p></details>
+      </section>
+    </div>
+  </main>
+  <footer class="site-footer"><p>Original questions and diagrams remain the work of their authors and publishers. Topic labels are for teaching and practice.</p><a href="index.html">Choose another library →</a></footer>
+  <div id="print-area"></div>
+</body>
+</html>
